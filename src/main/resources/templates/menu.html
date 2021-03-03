@@ -14,6 +14,16 @@
     <p th:text="${customerManiPedi}">the mani pedi</p>
 </div>
 <div id = "servicesMenu">
+    <table>
+        <tr>
+            <th>Facial Options</th>
+        </tr>
+        <th:block th:each="option : ${facialOptions}">
+            <tr>
+                <td th:text="${option}"></td>
+            </tr>
+        </th:block>
+    </table>
 </div>
 </body>
 </html>
