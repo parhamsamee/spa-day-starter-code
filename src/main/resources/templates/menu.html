@@ -25,18 +25,28 @@
         </th:block>
     </table>
 
-    <th:block th:if='${customerManiPedi.equals("manicure")}'>
+    <th:block th:if='${customerManiPedi.equals("manicure") || customerManiPedi.equals("both")}'>
         <h3>Manicure</h3>
         <p th:replace="fragments :: manicureDescription"></p>
     </th:block>
 
 
-    <th:block th:if='${customerManiPedi.equals("pedicure")}'>
+    <th:block th:if='${customerManiPedi.equals("pedicure") || customerManiPedi.equals("both")}'>
         <h3>Pedicure</h3>
         <p th:replace="fragments :: pedicureDescription"></p>
     </th:block>
 
+<footer>
+    <h3>Nail Polish Options</h3>
+    <div class= "nailPolish" style="background-color: lightblue;">
+    </div>
 
+    <div class= "nailPolish" style="background-color: black;">
+    </div>
+
+    <div class= "nailPolish" style="background-color: maroon;">
+    </div>
+</footer>
 </div>
 </body>
 </html>
