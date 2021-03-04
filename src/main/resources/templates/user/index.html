@@ -6,6 +6,21 @@
 </head>
 <body>
     <h1 th:text="${'Welcome ' + user.username + ' to your page!!'}"></h1>
-    <label><a href="/" />Spa Menu</label>
+    <label><a href="/">Spa Menu</a></label>
+
+    <h3>All My Users</h3>
+    <table>
+        <thead>
+        <tr>
+            <th>Username</th>
+            <th>Link</th>
+        </tr>
+        </thead>
+        <tr th:each="user :${users}">
+            <td th:text="${user.username}"></td>
+            <td>
+                <a th:href="@{/user/details/{id}(id=${user.id})}">Show Details</a>
+        </td>
+    </table>
 </body>
 </html>
