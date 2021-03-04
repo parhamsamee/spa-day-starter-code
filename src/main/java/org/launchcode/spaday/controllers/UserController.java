@@ -27,6 +27,9 @@ public class UserController {
             return "user/index";
         } else {
             // is false
+            model.addAttribute("error", "Your passwords do not match.");
+            model.addAttribute("username", user.getUsername());
+            model.addAttribute("email", user.getEmail());
             return "user/add";
         }
     }

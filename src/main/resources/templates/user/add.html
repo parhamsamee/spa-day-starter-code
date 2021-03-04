@@ -5,29 +5,30 @@
     <title>Title</title>
 </head>
 <body>
-<form method = 'post' action="/user">
-    <!-- username, email, password, verify password -->
-    <label>
-        Username:
-        <input type="text" name = "username">
-        </input>
-    </label>
-    <label>
-        E-mail:
-        <input type="email" name = "email">
-        </input>
-    </label>
-    <label>
-        Password:
-        <input type="password" name = "password">
-        </input>
-    </label>
-    <label>
-        Verify Password:
-        <input type="password" name = "verify">
-        </input>
-    </label>
-    <input type = 'submit' value = 'Submit'>
+    <h3 style="color: red;" th:text="${error}"></h3>
+    <form method = 'post' action="/user">
+        <!-- username, email, password, verify password -->
+        <label>
+            Username:
+            <input type="text" th:value="${username}" name = "username">
+            </input>
+        </label>
+        <label>
+            E-mail:
+            <input type="email" th:value="${email}" name = "email">
+            </input>
+        </label>
+        <label>
+            Password:
+            <input type="password" name = "password">
+            </input>
+        </label>
+        <label>
+            Verify Password:
+            <input type="password" name = "verify">
+            </input>
+        </label>
+        <input type = 'submit' value = 'Submit'>
 </form>
 </body>
 </html>
